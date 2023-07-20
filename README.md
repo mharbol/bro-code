@@ -1,6 +1,10 @@
 # Bro Code
 A collection of [LeetCode](https://leetcode.com/) and similar problems solved with the [best java build tool](https://gradle.org/) on the market.
 
+## [LeetCode 49 - Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+[My solution](src/main/java/io/github/mharbol/brocode/GroupAnagrams.java) uses a `Map<String, List<String>>` to find the anagrams.
+The keys are the alphabatized version of the input String and the values are the words whose letters match the keys.
+
 ## [LeetCode 155 - MinStack](https://leetcode.com/problems/min-stack/)
 [My solution](src/main/java/io/github/mharbol/brocode/MinStack.java) uses two parallel stacks to make the `MinStack` data structure.
 One stack is a traditional stack to keep track of the integers while the other keeps track of the minimum value at the current position of the two stacks.
