@@ -1,5 +1,5 @@
 
-package io.github.mharbol.brocode;
+package io.github.mharbol.brocode.leetcode;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;

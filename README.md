@@ -2,16 +2,16 @@
 A collection of [LeetCode](https://leetcode.com/) and similar problems solved with the [best java build tool](https://gradle.org/) on the market.
 
 ## [LeetCode 49 - Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-[My solution](src/main/java/io/github/mharbol/brocode/GroupAnagrams.java) uses a `Map<String, List<String>>` to find the anagrams.
+[My solution](src/main/java/io/github/mharbol/brocode/leetcode/GroupAnagrams.java) uses a `Map<String, List<String>>` to find the anagrams.
 The keys are the alphabatized version of the input String and the values are the words whose letters match the keys.
 
 ## [LeetCode 155 - MinStack](https://leetcode.com/problems/min-stack/)
-[My solution](src/main/java/io/github/mharbol/brocode/MinStack.java) uses two parallel stacks to make the `MinStack` data structure.
+[My solution](src/main/java/io/github/mharbol/brocode/leetcode/MinStack.java) uses two parallel stacks to make the `MinStack` data structure.
 One stack is a traditional stack to keep track of the integers while the other keeps track of the minimum value at the current position of the two stacks.
 Doing it this way allows the structure to have $O(1)$ complexity for `push()`, `pop()`, `top()`, and `getMin()` operations.
 
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
-[The best solution](src/main/java/io/github/mharbol/brocode/MinOpArr.java) requires a lot of maff.
+[The best solution](src/main/java/io/github/mharbol/brocode/leetcode/MinOpArr.java) requires a lot of maff.
 In short, we proved a closed form for if there were an even or odd number of items in the array;
 once that was determined, we applied the closed form for the given case.
 <details>
