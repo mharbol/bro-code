@@ -21,12 +21,11 @@ public class GroupAnagrams {
      */
     public List<List<String>> groupAnagrams(String[] strings) {
 
-        Map<String, List<String>> anagramMap = new HashMap<>();
-        
+        Map<AnagramComparitor, List<String>> anagramMap = new HashMap<>();
+
         for (String word : strings) {
-            char[] letters = word.toCharArray();
-            Arrays.sort(letters);
-            String key = new String(letters);
+
+            AnagramComparitor key = new AnagramComparitor(word);
 
             // attempt to add the word to a list in the Map
             try {
@@ -41,5 +40,82 @@ public class GroupAnagrams {
         }
 
         return new ArrayList<List<String>>(anagramMap.values());
+    }
+
+    /**
+     * Class to quickly(ish) compare {@link String}s as anagrams.
+     *
+     * Using {@link Comparable} is not totally necessary, it is just there in case
+     * an orderd {@link Map} is considered useful in the furture
+     */
+    class AnagramComparitor implements Comparable<AnagramComparitor> {
+
+        /**
+         * The number of lowercase letters
+         */
+        private static final int NUM_LOWER_CASE_LETTERS = 26;
+
+        /**
+         * Keeps count of the instances of any given lowercase English letter
+         */
+        private int[] charCounts = new int[NUM_LOWER_CASE_LETTERS];
+
+        public AnagramComparitor(String word) {
+            for (char letter : word.toCharArray()) {
+                charCounts[letter - 'a']++;
+            }
+        }
+
+        /**
+         * Compares this AnagramComparitor with another AnagramComparitor
+         * 
+         * @param other the other AnagramComparitor to compare to
+         * @return a negative integer, zero, or positive integer if this
+         *         AnagramComparitor is less than, equal to, or greater than other
+         */
+        @Override
+        public int compareTo(AnagramComparitor other) {
+
+            int thisLetter, otherLetter;
+
+            for (int index = 0; index < NUM_LOWER_CASE_LETTERS; index++) {
+                thisLetter = this.charCounts[index];
+                otherLetter = other.charCounts[index];
+                if (thisLetter < otherLetter) {
+                    return -1;
+                }
+                if (thisLetter > otherLetter) {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+
+        /**
+         * Checks for equality.
+         * 
+         * @param other the other AnagramComparitor to check equality against
+         * @return true if the AnagramComparitors are equal otherwise false
+         */
+        @Override
+        public boolean equals(Object other) {
+            if (other == null) {
+                return false;
+            }
+            if (!(other instanceof AnagramComparitor)) {
+                return false;
+            }
+            return this.compareTo((AnagramComparitor) other) == 0;
+        }
+
+        /**
+         * Hash code for this AnagramComparitor
+         *
+         * @return the hash code for this AnagramComparitor
+         */
+        @Override
+        public int hashCode() {
+            return Arrays.hashCode(charCounts);
+        }
     }
 }

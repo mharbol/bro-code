@@ -42,7 +42,7 @@ public class GroupAnagramsTest {
 
     @Test
     public void testLeetCodeExample2() {
-        input = new String[] {""};
+        input = new String[] { "" };
         expected = Arrays.asList(Arrays.asList(""));
         actual = cut.groupAnagrams(input);
         checkLists(expected, actual);
@@ -50,7 +50,7 @@ public class GroupAnagramsTest {
 
     @Test
     public void testLeetCodeExample3() {
-        input = new String[] {"a"};
+        input = new String[] { "a" };
         expected = Arrays.asList(Arrays.asList("a"));
         actual = cut.groupAnagrams(input);
         checkLists(expected, actual);
