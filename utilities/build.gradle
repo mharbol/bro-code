@@ -1,0 +1,4 @@
+
+plugins {
+    id 'bro-code.java-conventions'
+}

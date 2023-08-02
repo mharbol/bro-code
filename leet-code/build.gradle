@@ -1,0 +1,8 @@
+
+plugins {
+    id 'bro-code.java-conventions'
+}
+
+dependencies {
+    implementation project(':utilities')
+}
