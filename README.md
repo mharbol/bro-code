@@ -5,19 +5,27 @@ To keep the project available to many problems with reusable components (and jus
 [multi-project build](https://docs.gradle.org/current/userguide/multi_project_builds.html).
 The project currently has a `leet-code` subproject for LeetCode problems specifically and a `utilities` subproject for utils available to anyone.
 
+## [LeetCode 19 - Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/EndOfLinkedList.java)
+traverses the entire length of the linked list while maintaining an offset (`n`) from which to progress the dropped node.
+After walking the length of the linked list, the method can drop the correct node in a simple step.
+Maintaining the offset lets this solution achieve a $O(n)$ runtime while iterating over the list only once.
+
 ## [LeetCode 49 - Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-[My solution](leet-code/src/main/java/io/github/mharbol/leetcode/GroupAnagrams.java) uses a `Map<String, List<String>>` to find the anagrams.
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/GroupAnagrams.java)
+uses a `Map<String, List<String>>` to find the anagrams.
 The keys are the alphabatized version of the input String and the values are the words whose letters match the keys.
 
 Note: updated solution uses an inner `AnagramComparitor` class and therefore `Map<AnagramComparitor, List<String>>` that works *slightly* better.
 
 ## [LeetCode 155 - MinStack](https://leetcode.com/problems/min-stack/)
-[My solution](leet-code/src/main/java/io/github/mharbol/leetcode/MinStack.java) uses two parallel stacks to make the `MinStack` data structure.
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinStack.java)
+uses two parallel stacks to make the `MinStack` data structure.
 One stack is a traditional stack to keep track of the integers while the other keeps track of the minimum value at the current position of the two stacks.
 Doing it this way allows the structure to have $O(1)$ complexity for `push()`, `pop()`, `top()`, and `getMin()` operations.
 
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
-[The best solution](leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.
+[The best solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.
 In short, we proved a closed form for if there were an even or odd number of items in the array;
 once that was determined, we applied the closed form for the given case.
 <details>
