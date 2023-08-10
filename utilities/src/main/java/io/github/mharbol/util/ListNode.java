@@ -102,4 +102,5 @@ public class ListNode {
     @Override
     public String toString() {
         return val + " -> " + next;
+    }
 }
