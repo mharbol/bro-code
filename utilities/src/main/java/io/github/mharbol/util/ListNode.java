@@ -101,9 +101,5 @@ public class ListNode {
 
     @Override
     public String toString() {
-        if (next == null) {
-            return val + " -> null";
-        }
-        return val + " -> " + next.toString();
-    }
+        return val + " -> " + next;
 }
