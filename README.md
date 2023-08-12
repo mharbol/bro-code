@@ -57,6 +57,16 @@ Then we reverse the the chunk of the first `k` followed by the remaining element
 And there we have an array rotated by `k`.
 </details>
 
+## [LeetCode 224 - Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/BasicCalculator.java)
+is able to execute the calculation in one pass from left to right.
+The `calculate()` method keeps an accumulator which is added to an subtracted from as the index moves from left to right.
+Whenever the index reaches an open parenthesis, we kick off a new calculation to evaluate that quantity.
+Returns are only ever called when the index reaches the end of the string (this will be the return from the root calculation)
+or when we encounter a closing parenthesis.
+Carefully placing our `calculate()` calls ensures we do not return early and allows us to nest as many parentheses as we want.
+The `parseNumber()` and `progressIndex()` methods were real heros in making this solution a lot cleaner to read.
+
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
 [The best solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.
 In short, we proved a closed form for if there were an even or odd number of items in the array;
