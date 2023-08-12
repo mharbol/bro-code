@@ -24,6 +24,12 @@ uses two parallel stacks to make the `MinStack` data structure.
 One stack is a traditional stack to keep track of the integers while the other keeps track of the minimum value at the current position of the two stacks.
 Doing it this way allows the structure to have $O(1)$ complexity for `push()`, `pop()`, `top()`, and `getMin()` operations.
 
+## [LeetCode 189 - Rotate Array](https://leetcode.com/problems/rotate-array/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/ShiftArray.java)
+uses the classic solution of making a `temp` array to shift the elements right by `k` and then replaces them in the original (can't reassign the object).
+This gives me a $O(n)$ runtime and $O(n)$ space complexity, but I want to do it inplace as well.
+Working on a solution where I don't have to iterate over the array `k` times to shift everything to the right/left one at a time.
+
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
 [The best solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.
 In short, we proved a closed form for if there were an even or odd number of items in the array;
