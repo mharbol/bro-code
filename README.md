@@ -77,7 +77,7 @@ while `-y` refers to the total number of subtractions. Notice that the +/- pairs
 ```
 n | array                           | minOp
 --+---------------------------------+-------
-1 | [1]                             | 0
+1 | [ 1 ]                           | 0
   |                                 |
 --+---------------------------------+-------
 2 | [ 1   3 ]                       | 1

@@ -49,6 +49,13 @@ public class ShiftArray {
         nums[0] = last;
     }
 
+    /**
+     * Rotates an array to the right by a specified interval with constant space.
+     * This comes at the cost of a much longer practical runtime.
+     *
+     * @param nums array to be rotated
+     * @param k    the (positive) count to shift the array by
+     */
     public void rotateWithShifts(int[] nums, int k) {
 
         k %= nums.length;
