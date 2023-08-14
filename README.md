@@ -30,6 +30,10 @@ uses the classic solution of making a `temp` array to shift the elements right b
 This gives me a $O(n)$ runtime and $O(n)$ space complexity, but I want to do it inplace as well.
 Working on a solution where I don't have to iterate over the array `k` times to shift everything to the right/left one at a time.
 
+On a small redux, made the `roateArrayByOne()` method to do a poor attempt of running the code in constant space.
+While this works, it is terribly efficient as the code has to shift right up to `length - 1` times.
+This ultimately timed out the massive case in LeetCode. Time to work on the one pass in place approach.
+
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
 [The best solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.
 In short, we proved a closed form for if there were an even or odd number of items in the array;
