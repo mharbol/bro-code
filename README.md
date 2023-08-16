@@ -111,3 +111,13 @@ else
 
 </details>
 
+## The Jump Game Saga
+All of these deserve to be grouped together.
+These were a load of fun to work along with some friends from work.
+### [LeetCode 55 - Jump Game](https://leetcode.com/problems/jump-game/)
+[Our solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/jumpgame/JumpGame1.java)
+starts at the end of the array and looks for the next zero (the next "obstacle" to jump over).
+Once we get there, we spawn a pointer just left of the zero to look for the nearest position which can jump the zero.
+After this position is found, we set `zeroPointer` to the last jumpable position and keep moving to the end.
+If `zeroPointer` makes it to the start of the array, then the array is jumpable.
+If the pointer looking for the next jumpable point falls off the array, then it is not jumpable.
