@@ -144,3 +144,9 @@ Once we get there, we spawn a pointer just left of the zero to look for the near
 After this position is found, we set `zeroPointer` to the last jumpable position and keep moving to the end.
 If `zeroPointer` makes it to the start of the array, then the array is jumpable.
 If the pointer looking for the next jumpable point falls off the array, then it is not jumpable.
+
+### [LeetCode 45 - Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+[Our solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/jumpgame/JumpGame2.java)
+uses a similar approach as the first game.
+We start off from where we want to go and dispatch a pointer to find the farthest left position where we can get there.
+Since making it to the end is assured, we can afford this lax approach to finding the optimal path to the end.
