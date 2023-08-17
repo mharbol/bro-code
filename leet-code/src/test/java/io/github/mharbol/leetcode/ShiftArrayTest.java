@@ -89,4 +89,24 @@ public class ShiftArrayTest {
         cut.rotateArrayByOne(nums);
         Assert.assertTrue(Arrays.equals(expected, nums));
     }
+
+    @Test
+    public void testLeetCode1Reverse() {
+        nums = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+        k = 3;
+
+        expected = new int[] { 5, 6, 7, 1, 2, 3, 4 };
+        cut.rotateArrayTripleReverse(nums, k);
+        Assert.assertTrue(Arrays.equals(expected, nums));
+    }
+
+    @Test
+    public void testLeetCode2Reverse() {
+        nums = new int[] { -1, -100, 3, 99 };
+        k = 2;
+
+        expected = new int[] { 3, 99, -1, -100 };
+        cut.rotateArrayTripleReverse(nums, k);
+        Assert.assertTrue(Arrays.equals(expected, nums));
+    }
 }

@@ -30,9 +30,32 @@ uses the classic solution of making a `temp` array to shift the elements right b
 This gives me a $O(n)$ runtime and $O(n)$ space complexity, but I want to do it inplace as well.
 Working on a solution where I don't have to iterate over the array `k` times to shift everything to the right/left one at a time.
 
-On a small redux, made the `roateArrayByOne()` method to do a poor attempt of running the code in constant space.
+On a small redux, made the `rotateArrayByOne()` method to do a poor attempt of running the code in constant space.
 While this works, it is terribly efficient as the code has to shift right up to `length - 1` times.
 This ultimately timed out the massive case in LeetCode. Time to work on the one pass in place approach.
+
+Hopefully the final installment. This came from one of my coworkers.
+For this solution we reverse the array so that the "chunks" that need to be on the left and right hand sides of the array are on the
+correct sides but just in the reverse order of what they should be.
+From there we reverse the two slices (all in place) and our rotation is made in two passes.
+<details>
+    <summary>More complete example:</summary>
+
+For this example we will use an array of length 5 and `k = 2` (if `k > nums.length` then we just mod it down to size).
+First we reverse the entire array.
+```
+[ 1 2 3 4 5 ]
+  <--------
+[ 5 4 3 2 1 ]
+```
+Then we reverse the the chunk of the first `k` followed by the remaining elements.
+```
+[ 5 4 3 2 1 ]
+  <-- <----
+[ 4 5 1 2 3 ]
+```
+And there we have an array rotated by `k`.
+</details>
 
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
 [The best solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.

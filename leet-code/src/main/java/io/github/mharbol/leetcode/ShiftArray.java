@@ -64,4 +64,37 @@ public class ShiftArray {
             rotateArrayByOne(nums);
         }
     }
+
+    /**
+     * Reverses a slice of the array in the range [left, right]
+     *
+     * @param nums  the array to reverse a subset of elements
+     * @param left  the start of the reverse
+     * @param right the end of the reverse (inclusive)
+     */
+    private void reverse(int[] nums, int left, int right) {
+        int temp;
+        for (; left < right; left++, right--) {
+            temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+        }
+    }
+
+    /**
+     * Rotates an array to the right by a specified interval with constant space.
+     * First reverses the array, then reverses the left and right chunks
+     *
+     * @param nums array to be rotated
+     * @param k    the (positive) count to shift the array by
+     */
+    public void rotateArrayTripleReverse(int[] nums, int k) {
+        final int len = nums.length;
+        if (len <= 1)
+            return;
+        k %= len;
+        reverse(nums, 0, len - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, len - 1);
+    }
 }
