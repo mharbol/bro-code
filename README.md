@@ -18,6 +18,12 @@ The keys are the alphabatized version of the input String and the values are the
 
 Note: updated solution uses an inner `AnagramComparitor` class and therefore `Map<AnagramComparitor, List<String>>` that works *slightly* better.
 
+## [LeetCode 150 - Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/EvaluateReversePolishNotation.java)
+makes easy use of a `Stack` to keep track of the calculation.
+When we encounter a number, we push it onto the stack, when we encounter an operator, we pop the top two values, execute the operation,
+and push the result back on the stack.
+
 ## [LeetCode 155 - MinStack](https://leetcode.com/problems/min-stack/)
 [My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinStack.java)
 uses two parallel stacks to make the `MinStack` data structure.
