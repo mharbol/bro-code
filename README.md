@@ -80,6 +80,16 @@ or when we encounter a closing parenthesis.
 Carefully placing our `calculate()` calls ensures we do not return early and allows us to nest as many parentheses as we want.
 The `parseNumber()` and `progressIndex()` methods were real heros in making this solution a lot cleaner to read.
 
+## [LeetCode 227 - Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/BasicCalculator2.java)
+takes a different approach from the first one.
+Here we can take advantage of the order of operations and use a `Stack<Integer>` to make the `calculate()` method work.
+If the operation is an addition, we push the number onto the stack; subtraction pushes the negative number onto the stack.
+In the case of a multiplication, we pop off the stack to make that value the left operand and push its product with the right operand.
+We follow the same logic for division.
+Once done, we sum all of the values in the stack and return the result.
+Effectively, we evaluate all the chunks of multiplication first so that the only operation left is addition and subtraction.
+
 ## [LeetCode 1551 - Minimum Operations to Make Array Equal](https://leetcode.com/problems/minimum-operations-to-make-array-equal/)
 [The best solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MinOpArr.java) requires a lot of maff.
 In short, we proved a closed form for if there were an even or odd number of items in the array;
