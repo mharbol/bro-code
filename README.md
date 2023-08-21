@@ -18,6 +18,13 @@ The keys are the alphabatized version of the input String and the values are the
 
 Note: updated solution uses an inner `AnagramComparitor` class and therefore `Map<AnagramComparitor, List<String>>` that works *slightly* better.
 
+## [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+[Our solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/LongestConsecutiveSequence.java)
+was originally inspired and come up with by my colleague.
+In this case we put all the numbers into a set, pop a number from the set, and see how far right and left we can go (removing visited items each time).
+This outperformed [the Neet Code solution](https://www.youtube.com/watch?v=P6RZZMu_maU), but the LeetCode servers might have been a little stressed
+when I ran it because after a few more runs they were about neck and neck.
+
 ## [LeetCode 150 - Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 [My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/EvaluateReversePolishNotation.java)
 makes easy use of a `Stack` to keep track of the calculation.
