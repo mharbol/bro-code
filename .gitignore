@@ -7,3 +7,6 @@ build
 .classpath
 .project
 .settings/
+
+# vim thangs
+*.swp
