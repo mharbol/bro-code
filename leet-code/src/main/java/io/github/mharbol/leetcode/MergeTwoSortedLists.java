@@ -26,7 +26,7 @@ public class MergeTwoSortedLists {
 
         ListNode head, curr;
 
-        // assign starting node and progress corresponding node
+        // assign starting node and progress it
         if (list1.val < list2.val) {
             curr = list1;
             list1 = list1.next;

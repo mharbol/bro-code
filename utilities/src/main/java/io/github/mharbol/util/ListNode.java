@@ -103,4 +103,27 @@ public class ListNode {
     public String toString() {
         return val + " -> " + next;
     }
+
+    /**
+     * Creates a new ListNode from the input values.
+     *
+     * @param values the ordered values to enter into the ListNode
+     * @return the head of a ListNode representation of values; `null` if the list is empty.
+     */
+    public static ListNode newList(int... values) {
+
+        if (values.length == 0) {
+            return null;
+        }
+
+        ListNode head = new ListNode(values[0]);
+        ListNode curr = head;
+
+        for (int i = 1; i < values.length; i++) {
+            curr.next = new ListNode(values[i]);
+            curr = curr.next;
+        }
+
+        return head;
+    }
 }
