@@ -9,7 +9,7 @@ public class ListNode {
     /**
      * The value contained by this node
      */
-    int val;
+    public int val;
 
     /**
      * The next node in this linked list
