@@ -11,6 +11,13 @@ traverses the entire length of the linked list while maintaining an offset (`n`)
 After walking the length of the linked list, the method can drop the correct node in a simple step.
 Maintaining the offset lets this solution achieve a $O(n)$ runtime while iterating over the list only once.
 
+## [LeetCode 21 - Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/MergeTwoSortedLists.java)
+follows pretty easy steps.
+We first find an item to assign as the first spot in out return `ListNode` then iteratively compare the two nexts heads to find the next item while progressing
+the respective list head as needed.
+Once one (or both) have been exhaused, we fill the remainder of our merge with the surviving list.
+
 ## [LeetCode 49 - Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 [My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/GroupAnagrams.java)
 uses a `Map<String, List<String>>` to find the anagrams.
