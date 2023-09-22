@@ -22,9 +22,9 @@ public class MergeTwoSortedListsTest {
 
     @Test
     public void testLeetCode1() {
-        list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
-        list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
-        expected = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(4))))));
+        list1 = ListNode.newList(1, 2, 4);
+        list2 = ListNode.newList(1, 3, 4);
+        expected = ListNode.newList(1, 1, 2, 3, 4, 4);
         actual = cut.mergeTwoLists(list1, list2);
         Assert.assertEquals(expected, actual);
     }
