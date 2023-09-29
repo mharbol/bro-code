@@ -25,6 +25,12 @@ The keys are the alphabatized version of the input String and the values are the
 
 Note: updated solution uses an inner `AnagramComparitor` class and therefore `Map<AnagramComparitor, List<String>>` that works *slightly* better.
 
+## [LeetCode 94 - Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/InorderTreeTraversal.java)
+follows basic priciples from CS class.
+We use recursion to traverse left, own value, then right and return the result at each node; at each step we just add the current `val`.
+Sometimes basic is fast.
+
 ## [LeetCode 128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 [Our solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/LongestConsecutiveSequence.java)
 was originally inspired and come up with by my colleague.
