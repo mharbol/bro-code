@@ -11,11 +11,11 @@ import org.junit.Test;
  */
 public class MinStackTest {
 
-    private MinStack minStack;
+    private MinStack cut;
 
     @Before
     public void before() {
-        minStack = new MinStack();
+        cut = new MinStack();
     }
 
     /**
@@ -23,13 +23,13 @@ public class MinStackTest {
      */
     @Test
     public void testLeetCode() {
-        minStack.push(-2);
-        minStack.push(0);
-        minStack.push(-3);
-        assertTrue(minStack.getMin() == -3);
-        minStack.pop();
-        assertTrue(minStack.top() == 0);
-        assertTrue(minStack.getMin() == -2);
+        cut.push(-2);
+        cut.push(0);
+        cut.push(-3);
+        assertTrue(cut.getMin() == -3);
+        cut.pop();
+        assertTrue(cut.top() == 0);
+        assertTrue(cut.getMin() == -2);
     }
 
     /**
@@ -37,13 +37,13 @@ public class MinStackTest {
      */
     @Test
     public void testBaisic() {
-        assertTrue(minStack.size() == 0);
-        minStack.push(12);
-        assertTrue(minStack.size() == 1);
-        assertTrue(minStack.top() == 12);
-        assertTrue(minStack.getMin() == 12);
-        minStack.pop();
-        assertTrue(minStack.size() == 0);
+        assertTrue(cut.size() == 0);
+        cut.push(12);
+        assertTrue(cut.size() == 1);
+        assertTrue(cut.top() == 12);
+        assertTrue(cut.getMin() == 12);
+        cut.pop();
+        assertTrue(cut.size() == 0);
     }
 
     /**
@@ -51,10 +51,10 @@ public class MinStackTest {
      */
     @Test
     public void testMinFirst() {
-        minStack.push(-1);
-        minStack.push(5);
-        minStack.push(3);
-        assertTrue(minStack.getMin() == -1);
+        cut.push(-1);
+        cut.push(5);
+        cut.push(3);
+        assertTrue(cut.getMin() == -1);
     }
 
     /**
@@ -62,10 +62,10 @@ public class MinStackTest {
      */
     @Test
     public void testMinLast() {
-        minStack.push(5);
-        minStack.push(3);
-        minStack.push(-1);
-        assertTrue(minStack.getMin() == -1);
+        cut.push(5);
+        cut.push(3);
+        cut.push(-1);
+        assertTrue(cut.getMin() == -1);
     }
 
     /**
@@ -73,10 +73,10 @@ public class MinStackTest {
      */
     @Test
     public void testMinMid() {
-        minStack.push(5);
-        minStack.push(-1);
-        minStack.push(3);
-        assertTrue(minStack.getMin() == -1);
+        cut.push(5);
+        cut.push(-1);
+        cut.push(3);
+        assertTrue(cut.getMin() == -1);
     }
 
     /**
@@ -84,21 +84,21 @@ public class MinStackTest {
      */
     @Test
     public void testMinTwice() {
-        minStack.push(34);
-        minStack.push(-1);
-        minStack.push(5);
-        minStack.push(-1);
-        minStack.push(3);
-        assertTrue(minStack.getMin() == -1);
-        minStack.pop(); // head == -1, min == -1
-        assertTrue(minStack.getMin() == -1);
-        assertTrue(minStack.top() == -1);
-        minStack.pop();
-        minStack.pop();
-        minStack.pop();
-        assertTrue(minStack.getMin() == 34);
-        assertTrue(minStack.top() == 34);
-        minStack.pop();
-        assertTrue(minStack.size() == 0);
+        cut.push(34);
+        cut.push(-1);
+        cut.push(5);
+        cut.push(-1);
+        cut.push(3);
+        assertTrue(cut.getMin() == -1);
+        cut.pop(); // head == -1, min == -1
+        assertTrue(cut.getMin() == -1);
+        assertTrue(cut.top() == -1);
+        cut.pop();
+        cut.pop();
+        cut.pop();
+        assertTrue(cut.getMin() == 34);
+        assertTrue(cut.top() == 34);
+        cut.pop();
+        assertTrue(cut.size() == 0);
     } 
 }
