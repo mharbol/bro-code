@@ -83,6 +83,13 @@ Then we reverse the the chunk of the first `k` followed by the remaining element
 And there we have an array rotated by `k`.
 </details>
 
+## [LeetCode 202 - Happy Number](https://leetcode.com/problems/happy-number/)
+[My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/HappyNumbers.java)
+was slightly rigged since I published a paper on these numbers previously.
+I saw an annoying YouTube short code an overly complicated version of this using `Set`s to determine if the sequence repeats.
+I know that all integers will either go to 1 or 4 following the Happy Function.
+All I really have to do then is return `true` when I hit 1 or `false` when I hit 4 (... and 0 as a catch-all).
+
 ## [LeetCode 224 - Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 [My solution](https://github.com/mharbol/bro-code/blob/master/leet-code/src/main/java/io/github/mharbol/leetcode/BasicCalculator.java)
 is able to execute the calculation in one pass from left to right.
