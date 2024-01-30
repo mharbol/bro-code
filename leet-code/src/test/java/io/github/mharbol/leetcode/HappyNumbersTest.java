@@ -28,7 +28,7 @@ public class HappyNumbersTest {
     }
 
     @Test
-    public void testLeet3() {
+    public void testDemo() {
         Assert.assertFalse(cut.isHappy(11));
     }
 }
