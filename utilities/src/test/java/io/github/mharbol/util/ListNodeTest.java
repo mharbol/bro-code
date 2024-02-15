@@ -75,6 +75,7 @@ public class ListNodeTest {
         ListNode list2 = null;
 
         Assert.assertNotEquals(list1, list2);
+        Assert.assertNotEquals(list2, list1);
     }
 
     /**
